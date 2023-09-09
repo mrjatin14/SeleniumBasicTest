@@ -63,7 +63,7 @@ public class ReadDataXLApachePOIDemo {
 			driver.manage().window().maximize();
 			driver.get("https://www.saucedemo.com/v1/");
 			//enter username
-			driver.findElement(By.id("user-name")).sendKeys(ExcelWSheet.getRow(currentRow).getCell(0).toString());
+			driver.findElement(By.id("user-name")).sendKeys(ExcelWSheet.getRow(currentRow).getCell(0).toString()); //if in xl file we any other data like numeric/boolean data then we have seprate methd(getNumericCellValue)
 			//enter password
 			driver.findElement(By.id("password")).sendKeys(ExcelWSheet.getRow(currentRow).getCell(1).toString());
 			
